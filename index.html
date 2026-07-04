@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서강희 자기소개 suuuu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #2ecc71, #3498db, #1abc9c, #2ecc71);
+      background-size: 300% 300%;
+      animation: skyMove 10s ease infinite;
+      font-family: 'Segoe UI', sans-serif;
+      color: black;
+      padding: 40px 20px;
+    }
+
+    @keyframes skyMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+      letter-spacing: 4px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f9ca24, #e55039);
+      margin: 0 auto 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      border: 5px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .intro {
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 30px 40px;
+      margin-bottom: 50px;
+      font-size: 1.15rem;
+      line-height: 1.9;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .intro h2 {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #f9ca24, #e55039);
+      border-radius: 24px;
+      padding: 30px 24px;
+      width: 220px;
+      min-height: 220px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-icon {
+      font-size: 2.8rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+        margin-bottom: 30px;
+      }
+
+      .intro {
+        padding: 20px 25px;
+        margin-bottom: 40px;
+        font-size: 1rem;
+      }
+
+      .intro h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+
+      .cards {
+        gap: 15px;
+      }
+
+      .card {
+        width: 180px;
+        min-height: 180px;
+        padding: 20px 18px;
+        gap: 10px;
+      }
+
+      .card-icon {
+        font-size: 2.2rem;
+      }
+
+      .card h3 {
+        font-size: 1rem;
+      }
+
+      .card p {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      .profile-img {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .intro {
+        padding: 15px 18px;
+        margin-bottom: 30px;
+        font-size: 0.95rem;
+        border-radius: 15px;
+      }
+
+      .intro h2 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
+
+      .cards {
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+        min-height: 150px;
+        padding: 15px;
+        gap: 8px;
+      }
+
+      .card-icon {
+        font-size: 2rem;
+      }
+
+      .card h3 {
+        font-size: 0.95rem;
+      }
+
+      .card p {
+        font-size: 0.8rem;
+      }
+    }
+
+    .blackhole-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #333, #000);
+      border: 2px solid #00ffff;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00ffff, inset 0 0 20px rgba(0, 255, 255, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      z-index: 100;
+    }
+
+    .blackhole-btn:hover {
+      box-shadow: 0 0 30px #00ffff, inset 0 0 30px rgba(0, 255, 255, 0.5);
+      transform: scale(1.1);
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+      transition: all 0.3s ease;
+      z-index: 101;
+    }
+
+    .back-btn:hover {
+      box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+      transform: scale(1.05);
+    }
+
+    @keyframes sucked {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+
+    .being-sucked {
+      animation: sucked 0.6s ease-in forwards;
+    }
+
+    .taunt-message {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.9);
+      color: #00ffff;
+      padding: 30px 50px;
+      border-radius: 20px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 0 30px #00ffff;
+      border: 2px solid #00ffff;
+      z-index: 1000;
+      animation: fadeInOut 2s ease-in-out;
+      letter-spacing: 2px;
+    }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+        scale: 0.5;
+      }
+      50% {
+        opacity: 1;
+        scale: 1;
+      }
+      100% {
+        opacity: 0;
+        scale: 0.5;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .blackhole-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.2rem;
+      }
+
+      .back-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+    }
+
+    .detail-view {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #2ecc71, #3498db, #1abc9c, #2ecc71);
+      background-size: 300% 300%;
+      animation: skyMove 10s ease infinite;
+      padding: 40px 20px;
+      text-align: center;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .detail-view.active {
+      display: flex;
+    }
+
+    .detail-content {
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 60px 80px;
+      max-width: 900px;
+      max-height: 85vh;
+      overflow-y: auto;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      animation: slideIn 0.6s ease-out;
+    }
+
+    .detail-icon {
+      font-size: 7rem;
+      margin-bottom: 30px;
+    }
+
+    .detail-title {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    .detail-text {
+      font-size: 1.4rem;
+      line-height: 2.2;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .detail-back-btn {
+      padding: 15px 40px;
+      background: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.2rem;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .detail-back-btn:hover {
+      box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+      transform: scale(1.05);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="back-btn" id="backBtn" style="display:none;">← 이전</button>
+
+  <div class="container">
+    <h1 id="title">El Mundo de Segang Hee</h1>
+
+    <div class="profile-img" id="profileImg">🙋</div>
+
+    <div class="intro" id="intro">
+      <h2>안녕하세요!</h2>
+      <p>
+        저는 서강희입니다.<br>
+        매일 새로운 것을 배우고 도전하는 것을 좋아합니다.<br>
+        이 페이지는 저의 작은 자기 소개를 알려주는 공간이에요. 😊
+      </p>
+    </div>
+
+    <div class="cards" id="cards">
+      <div class="card">
+        <div class="card-icon">⚾</div>
+        <h3>취미</h3>
+        <p>야구하기, 게임하기, 런닝을 즐깁니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎮</div>
+        <h3>좋아하는 게임</h3>
+        <p>마인크래프트, 로블록스, 브롤스타즈를 즐겨 합니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🍕</div>
+        <h3>음식</h3>
+        <p>피자, 칼국수, 치킨을 제일 좋아합니다!</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="blackhole-btn" id="blackholeBtn">🕳️</button>
+
+  <div class="detail-view" id="detailView">
+    <div class="detail-content">
+      <div class="detail-icon" id="detailIcon"></div>
+      <h2 class="detail-title" id="detailTitle"></h2>
+      <p class="detail-text" id="detailText"></p>
+      <button class="detail-back-btn" id="detailBackBtn">← 돌아가기</button>
+    </div>
+  </div>
+
+  <script>
+    let clickCount = 0;
+    const blackholeBtn = document.getElementById('blackholeBtn');
+    const backBtn = document.getElementById('backBtn');
+    const title = document.getElementById('title');
+    const profileImg = document.getElementById('profileImg');
+    const intro = document.getElementById('intro');
+    const cards = document.getElementById('cards');
+    const detailView = document.getElementById('detailView');
+    const detailBackBtn = document.getElementById('detailBackBtn');
+    const detailIcon = document.getElementById('detailIcon');
+    const detailTitle = document.getElementById('detailTitle');
+    const detailText = document.getElementById('detailText');
+
+    const cardDetails = {
+      '취미': {
+        icon: '⚾',
+        title: '취미',
+        text: '야구하기, 게임하기, 런닝, 산책을 즐깁니다.<br><br><strong>⚾ 야구하기</strong><br>팀 스포츠로서 친구들과 함께 경기하는 즐거움이 있고,<br>전략과 체력을 동시에 기를 수 있습니다.<br><br><strong>🎮 게임하기</strong><br>몰입감 있는 게임 세계에서 스트레스를 풀고<br>새로운 경험을 할 수 있습니다.<br><br><strong>🏃 런닝</strong><br>개인의 체력과 정신력을 단련하며<br>자신과의 경쟁에서 성장합니다.<br><br><strong>🚶 산책</strong><br>자연과 함께하며 명상적인 시간을 가지고<br>마음의 평온함을 찾습니다.<br><br>이 모든 활동들이 저를 더욱 활기차고 건강하게 만들어줍니다!'
+      },
+      '좋아하는 게임': {
+        icon: '🎮',
+        title: '좋아하는 게임',
+        text: '<strong>🏗️ 마인크래프트</strong><br>무한한 창의성을 발휘할 수 있는 자유로운 세계입니다.<br>블록을 쌓으면서 나만의 세상을 만들어갑니다.<br><br><strong>🎪 로블록스</strong><br>다양한 게임 경험을 할 수 있는 플랫폼입니다.<br>친구들과 함께 여러 게임을 즐길 수 있고,<br>새로운 게임을 계속 발견할 수 있습니다.<br><br><strong>⚔️ 브롤스타즈</strong><br>빠르고 재미있는 3v3 전투 게임입니다.<br>친구들과 경쟁하고 협력하는 재미,<br>그리고 새로운 캐릭터를 수집하는 즐거움이 있습니다!<br><br>이 게임들이 제 하루를 더욱 풍요롭게 만들어줍니다! 🎮✨'
+      },
+      '음식': {
+        icon: '🍕',
+        title: '음식',
+        text: '<strong>🍕 피자</strong><br>친구들과 함께 나누는 맛이 최고입니다.<br>다양한 토핑과 맛의 조화가 정말 맛있고,<br>함께 먹을 때 더욱 즐거워집니다.<br><br><strong>🍜 칼국수</strong><br>따뜻한 국물의 편안함을 줍니다.<br>겨울날씨에 한 그릇의 칼국수는 최고의 위로이고,<br>쫄깃한 면발의 식감이 정말 좋습니다.<br><br><strong>🍗 치킨</strong><br>언제나 설레는 음식입니다.<br>친구들과 함께 나눠먹는 치킨은 기분까지 좋아지고,<br>바삭바삭한 식감이 중독적입니다!<br><br>이 세 가지 음식이 저를 행복하게 만드는<br>가장 소중한 음식들입니다! 😋🍽️'
+      }
+    };
+
+    const taunts = [
+      '나를 이길 수 없어! 😈',
+      '더 빨려들어! 💨',
+      '모든 게 사라져! 🕳️',
+      '저항은 무의미해! ⚫',
+      '깨달아, 난 블랙홀이야! 🌌',
+      '흡수된다! 🌀',
+      '영원히 갇혀! 🔒',
+      '탈출 불가능! 😱',
+      '내 힘을 느껴봐! ⚡',
+      '소멸의 시간! ☠️',
+      '도망칠 수 없어! 🏃',
+      '절망해! 😭',
+      '끝이다! 💀',
+      '사라져버려! 👻',
+      '너는 내거야! 🖤',
+      '운명을 받아들여! 📿',
+      '무력해! 🤕',
+      '강해! 💪',
+      '다시 돌아오지 마! 🚫',
+      '하하하! 😂'
+    ];
+
+    function showTaunt() {
+      const taunt = taunts[Math.floor(Math.random() * taunts.length)];
+      const message = document.createElement('div');
+      message.className = 'taunt-message';
+      message.textContent = taunt;
+
+      const randomX = Math.random() * (window.innerWidth - 300);
+      const randomY = Math.random() * (window.innerHeight - 150);
+      message.style.left = randomX + 'px';
+      message.style.top = randomY + 'px';
+
+      document.body.appendChild(message);
+      setTimeout(() => {
+        message.remove();
+      }, 2000);
+    }
+
+    blackholeBtn.addEventListener('click', () => {
+      clickCount++;
+      showTaunt();
+
+      if (clickCount === 1) {
+        const allElements = [title, profileImg, intro, cards];
+        allElements.forEach(el => {
+          el.classList.add('being-sucked');
+          setTimeout(() => {
+            el.style.display = 'none';
+          }, 600);
+        });
+        backBtn.style.display = 'block';
+      } else if (clickCount === 2) {
+        const allElements = [backBtn];
+        allElements.forEach(el => {
+          el.classList.add('being-sucked');
+          setTimeout(() => {
+            el.style.display = 'none';
+          }, 600);
+        });
+      }
+    });
+
+    backBtn.addEventListener('click', () => {
+      clickCount--;
+      backBtn.style.display = 'none';
+      title.classList.remove('being-sucked');
+      profileImg.classList.remove('being-sucked');
+      intro.classList.remove('being-sucked');
+      cards.classList.remove('being-sucked');
+      title.style.display = 'block';
+      profileImg.style.display = 'flex';
+      intro.style.display = 'block';
+      cards.style.display = 'flex';
+    });
+
+    const cardElements = document.querySelectorAll('.card');
+    cardElements.forEach(card => {
+      card.addEventListener('click', () => {
+        const cardTitle = card.querySelector('h3').textContent;
+        const detail = cardDetails[cardTitle];
+
+        if (detail) {
+          title.classList.add('being-sucked');
+          profileImg.classList.add('being-sucked');
+          intro.classList.add('being-sucked');
+          cards.classList.add('being-sucked');
+
+          setTimeout(() => {
+            title.style.display = 'none';
+            profileImg.style.display = 'none';
+            intro.style.display = 'none';
+            cards.style.display = 'none';
+
+            detailIcon.textContent = detail.icon;
+            detailTitle.textContent = detail.title;
+            detailText.innerHTML = detail.text;
+            detailView.classList.add('active');
+            blackholeBtn.style.display = 'none';
+          }, 600);
+        }
+      });
+    });
+
+    detailBackBtn.addEventListener('click', () => {
+      detailView.classList.remove('active');
+      title.style.display = 'block';
+      profileImg.style.display = 'flex';
+      intro.style.display = 'block';
+      cards.style.display = 'flex';
+      blackholeBtn.style.display = 'flex';
+      title.classList.remove('being-sucked');
+      profileImg.classList.remove('being-sucked');
+      intro.classList.remove('being-sucked');
+      cards.classList.remove('being-sucked');
+    });
+  </script>
+</body>
+</html>
